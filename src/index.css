@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-white;
+  }
+  
+  input, textarea, select {
+    @apply text-white;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    @apply text-white/40;
+  }
+  
+  input[type="number"], input[type="text"], input[type="email"], textarea, select {
+    color: white !important;
+  }
+  
+  input[type="number"]::placeholder, input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-green to-brand-violetLight bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-brand {
+    @apply bg-gradient-to-r from-brand-violetDark to-brand-violetLight;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .input-dark {
+    @apply bg-white/5 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green text-white placeholder-white/40 focus:bg-white/10;
+  }
+  
+  .input-light {
+    @apply bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-green text-slate-900 placeholder-slate-400;
+  }
+}
